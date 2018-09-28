@@ -7,14 +7,13 @@ empty_space = " "
 blank = floors - 1
 i = 1
 
-if floors < 1
+if floors < 1 || floors > 25
 	puts "Erreur: Veuillez saisir un nombre entre 1 et 25"	
 else
 	puts "Voici la pyramide :"
-end
-
-while i <= floors
-	puts empty_space * blank + wall * i
-	i = i + 1
-	blank = blank - 1
+	while i <= floors
+		puts empty_space * blank + wall * i
+		i = i + 1
+		blank = blank - 1
+	end
 end
